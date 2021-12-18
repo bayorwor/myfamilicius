@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "443749720702",
+    "project_id": "famliciousapp",
+    "storage_bucket": "famliciousapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443749720702:android:74093fb194e7b94c5eee2f",
+        "android_client_info": {
+          "package_name": "com.TechBudu.famliciousapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443749720702-b5ahlth2jkcltquhqojkco3478fti8g0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.TechBudu.famliciousapp",
+            "certificate_hash": "a1827a567ff8bbdeb1f8c84df17a51578e2c938b"
+          }
+        },
+        {
+          "client_id": "443749720702-ufc4j3dpu9q5qv0gg0gcl4gd0bq4vik1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsne2Ec1QUg6g8cO4icB1iZh_gOXq2sGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443749720702-ufc4j3dpu9q5qv0gg0gcl4gd0bq4vik1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
