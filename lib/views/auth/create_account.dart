@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:unicons/unicons.dart';
 
 class CreateAccount extends StatelessWidget {
@@ -22,7 +23,30 @@ class CreateAccount extends StatelessWidget {
                   ),
                 ),
                 TextButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      showBarModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return Container(
+                              height: 150,
+                              child: Column(
+                                children: [
+                                  TextButton.icon(
+                                    onPressed: () {},
+                                    icon:
+                                        Icon(UniconsLine.camera_plus, size: 35),
+                                    label: Text("Take from camera"),
+                                  ),
+                                  TextButton.icon(
+                                    onPressed: () {},
+                                    icon: Icon(UniconsLine.image, size: 35),
+                                    label: Text("Select from gallery"),
+                                  ),
+                                ],
+                              ),
+                            );
+                          });
+                    },
                     icon: Icon(UniconsLine.camera),
                     label: Text("Upload profile picture")),
                 SizedBox(height: 30.0),

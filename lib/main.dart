@@ -1,8 +1,11 @@
 import 'package:famliciousapp/views/auth/login_view.dart';
 import 'package:famliciousapp/views/home_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(FamliciousApp());
 }
 

@@ -1,4 +1,5 @@
 import 'package:famliciousapp/views/auth/create_account.dart';
+import 'package:famliciousapp/views/auth/forgot_password.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -41,7 +42,12 @@ class LoginView extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ForgotPassword(),
+                  ),
+                ),
                 child: Text("Forgot Password? reset"),
               ),
             ),
