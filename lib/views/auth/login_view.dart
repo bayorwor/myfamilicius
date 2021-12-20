@@ -1,5 +1,6 @@
 import 'package:famliciousapp/views/auth/create_account.dart';
 import 'package:famliciousapp/views/auth/forgot_password.dart';
+import 'package:famliciousapp/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -52,7 +53,14 @@ class LoginView extends StatelessWidget {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeView(),
+                  ),
+                );
+              },
               child: Text("Login",
                   style: TextStyle(color: Colors.white, fontSize: 20)),
               style: TextButton.styleFrom(
