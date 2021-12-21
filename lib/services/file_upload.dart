@@ -11,12 +11,19 @@ class FileUploadService {
   Future<String?> uploadProfile(
       {required File image, required String userID}) async {
     try {
-      Fstorage.ref().child('profile/$userID.jpg');
-      await Fstorage.ref().putFile(image);
-      final String ImageUrl = await Fstorage.ref().getDownloadURL();
-      return ImageUrl;
+      String? downloadUrl;
+      Reference storageRef =
+          Fstorage.ref().child("profile").child("$userID.jpg");
+
+      UploadTask storageUploadTask = storageRef.putFile(image);
+      TaskSnapshot snapshot = await storageUploadTask
+          .whenComplete(() => storageRef.getDownloadURL());
+
+      downloadUrl = await snapshot.ref.getDownloadURL();
+
+      return downloadUrl;
     } on FirebaseException catch (e) {
-      print(e);
+      print(e.message);
       return null;
     }
   }
