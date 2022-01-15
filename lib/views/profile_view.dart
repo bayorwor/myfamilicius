@@ -1,8 +1,19 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({Key? key}) : super(key: key);
+
+  static final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  void _signOut() {
+    _auth.signOut();
+  }
+
+  void getUser() async {
+    // await _auth.currentUser();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +38,17 @@ class ProfileView extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.notifications,
                         size: 44,
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        UniconsLine.edit,
+                      onPressed: () {
+                        _signOut();
+                      },
+                      icon: const Icon(
+                        UniconsLine.sign_out_alt,
                         size: 44,
                       ),
                     )
